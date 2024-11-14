@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Primed English</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg custom-nav py-4 rounded-nav shadow-sm">
+            <div class="container-fluid py-2">
+                <a class="navbar-brand" href="index.html">
+                    <img class="ml-50" height="30%" width="30%" src="https://primed.com.co/wp-content/uploads/2023/12/Primed-Community-white-logo.webp" alt="">
+                </a>
+        
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <form action="" class="d-flex">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="curriculum.html">Lesson Plans</a>
+                            </li>
+                            <!-- <li class="nav-item mx-4">
+                                <div id="search-lessons" class="input-group mb-3">
+                                    <select class="form-select" id="lesson-select">
+                                        <option selected>Select a Lesson</option>
+                                        <option value="1">L-1</option>
+                                        <option value="2">L-2</option>
+                                        <option value="3">L-3</option>
+                                        <option value="4">L-4</option>
+                                        <option value="5">L-5</option>
+                                        <option value="6">L-6</option>
+                                        <option value="7">L-7</option>
+                                        <option value="8">L-8</option>
+                                        <option value="9">L-9</option>
+                                        <option value="10">L-10</option>
+                                        <option value="11">L-11</option>
+                                        <option value="12">L-12</option>
+                                        <option value="13">L-13</option>
+                                        <option value="14">L-14</option>
+                                        <option value="15">L-15</option>
+                                        <option value="16">L-16</option>
+                                        <option value="17">L-17</option>
+                                        <option value="18">L-18</option>
+                                        <option value="19">L-19</option>
+                                        <option value="20">L-20</option>
+                                        <option value="21">L-21</option>
+                                        <option value="22">L-22</option>
+                                        <option value="23">L-23</option>
+                                        <option value="24">L-24</option>
+                                        <option value="25">L-25</option>
+                                        <option value="26">L-26</option>
+                                        <option value="27">L-27</option>
+                                        <option value="28">L-28</option>
+                                        <option value="29">L-29</option>
+                                        <option value="30">L-30</option>
+                                    </select>
+                                    <button id="search-btn" class="btn" type="button">Go</button>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑ Top</button>
+
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="videoModalLabel">YouTube Video</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                    <iframe id="modal_video" src="" title="YouTube video" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade bg-primary" id="generic_modal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content vh-90 bg-dark text-light"> <!-- Adjust height as needed -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- PDF Viewer iframe with custom height -->
+                        <iframe id="web_modal" src="" width="100%" height="100%" class="bdr-8"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div>
+            <div class="ptop-4 pbot-4">
+                <h1 class="links-id">
+                    Important Links
+                </h1>
+            </div>
+
+            <div class="box ptop-4 pbot-4">
+                <span class="bl bbt">Lesson Plan Site: <button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#generic_modal" onclick="openPDF('www.spanishkidstuff.com/lesson-plans-order.html#ages-8-14')">In Page</button> or: </span> 
+                <a class="important-link" target="_blank" href="https://www.spanishkidstuff.com/lesson-plans-order.html#ages-8-14">https://www.spanishkidstuff.com/lesson-plans-order.html#ages-8-14</a><br><br>
+                <span class="bl bbt">Google Doc: <button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#generic_modal" onclick="openPDF('docs.google.com/document/d/1NnA9YjcLefEKEs1hdIIVNGTpNwcLhyFDvET_agDFX3s/edit?tab=t.0')">In Page</button> or: </span>
+                <a class="important-link" href="https://docs.google.com/document/d/1NnA9YjcLefEKEs1hdIIVNGTpNwcLhyFDvET_agDFX3s/edit?tab=t.0" target="_blank" rel="noopener noreferrer">https://docs.google.com/document/d/1NnA9YjcLefEKEs1hdIIVNGTpNwcLhyFDvET_agDFX3s/edit?tab=t.0</a>
+            </div>
+        </div>
+
+        <div class="ptop-4 pbot-4">
+            <h1 class="links-id">Lesson Plans</h1>
+        </div>
+
+        <div class="flex col">
+            <div class="flex-row">
+                <div class="pt-3" id="L-1">
+                    <details class="main-det">
+                        <summary class="main-det-sum">Lesson Plan 1: Greetings and simple polite words <!--<button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#pdfModal" onclick="openPDF('www.spanishkidstuff.com/lesson-plans/intro-lesson-young-kids.pdf')">Open PDF</button>--></summary>
+                        <div class="details-content">
+                            <p><b>Objective</b>: <i><u>Learn basic greetings and polite words used in everyday conversation.</u></i></p>
+                            <p><b>Video Link</b>: <a class="vid-link" target="_blank" href="https://youtu.be/5v2S84EuN0A?si=bTuG5wOMNx826a_8">Learn Spanish Greetings | English to Spanish | Rock 'N Learn</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(0)">Open modal</button></p>
+                            <div>
+                                <img  class="lesson-img pd45" src="https://wallpaperaccess.com/full/1149953.jpg" alt="">
+                            </div>
+                            <p><b>Introduce the words</b>: <text class="purple pd">“Hello", “Good morning”, “Good afternoon”, “Good evening”, “Goodbye”,  “How are you?”, “My name is”, “Pleased to meet you”, “Fine, thank you”, “What is your name”, “What’s going on?”, “Nothing”, “Yes”, “No”</text></p>
+                            <p>
+                                <b>Greeting Circle</b>: <text class="pd purple">Students stand in a circle and greet the person next to them using phrases like “Hello", “Good morning”, “Good afternoon”, “Good evening”, “Goodbye”,  “How are you?”, “My name is”, “Pleased to meet you”, “Fine, thank you”, “What is your name”, “What’s going on?”, “Nothing”, “Yes”, “No”</text>
+                            </p>
+                            <p><b>Next Steps:</b> <text class="pd purple">Each student repeats the greeting until it goes around the circle. Could do a second round and also use a ball: have child 1 start and say a greeting and question then throw it to child 2 who greets them as well and then asks a question to the next child they decide to throw the ball to  and so on (mentioned in website lesson plans)</text></p>
+                            <text class="pdbbt">Introduction (~10mins)</text>
+            
+                            <p class="bbt purple">Use flashcards with images or simple scenarios (e.g., someone handing over an item with "Thank you").</p>
+                            <p><a target="_blank" href="https://quizlet.com/935476065/english-basics-flash-cards/?i=5zglck&x=1jqt">Quizlet Flashcards</a></p>
+                            <details class="embeds">
+                                <summary>Click for PDF flashcards</summary>
+                                <object class="pd-40" data="English Basics Flashcards.pdf" type="application/pdf" width="90%" height="600px">
+                                    <p>Your browser does not support PDFs. <a href="https://drive.google.com/file/d/1glUV7KOD_tQkMoz5rYkCTfFi9J3LJju8/view?usp=sharing">Download the PDF</a>.</p>
+                                </object>
+                            </details>
+                            <div class="pdbbt">Main Activities (~20)</div>
+                            <div class="pdbbtl">Charades</div>
+                            <ol class="py10 pd45 purple">
+                                <li>Each team gets in a line, facing in the same direction.</li>
+                                <li>The child at the end of the line (Child A) will turn around, and a volunteer will show them a picture of a greeting to act out.</li>
+                                <li>When Child A has seen the picture, they will turn back around and tap on the shoulder of the child in front of them (Child B).</li>
+                                <li>Child B will turn around to face Child A, and try to mimic the actions of Child A. Child A cannot talk.</li>
+                                <li>When Child B has understood, they will turn back around and tap on the shoulder of the child in front of them (Child C) and repeat the same action.</li>
+                                <li>The process repeats until the child at the front of the line (Child Z) has seen the action.</li>
+                                <li>Child Z will then make a guess as to what the greeting might be, based on the actions.</li>
+                                <li>Each team will have a different greeting to act out, and the team to guess correctly in the shortest amount of time wins.</li>
+                                <li>When everyone has had a turn, teams will count up their points, and the team with the most points wins.</li>
+                            </ol>
+                            <div class="pdbbtl">Canva Matching Activity:  Match words with corresponding pictures (e.g., a picture of someone waving with "Goodbye").</div>
+            
+                            <details class="embeds">
+                                <summary>Click to view matching activity</summary>
+                                <div class="pd-25">
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style" src="https://www.canva.com/design/DAGPJkAGjcI/R0TefJPBSCERfdUS8B1IGA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+                                    </div>
+                                    <a href="https://www.canva.com/design/DAGPJkAGjcI/R0TefJPBSCERfdUS8B1IGA/view?utm_content=DAGPJkAGjcI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">White Colorful Numbers From 1 To 20 Flashcards</a> by Eva Winchester
+            
+                                </div>
+                            </details>
+                            <div class="pdbbtl">Sentence Building: Provide sentence strips, and students complete sentences using the new words.</div>
+                            <details class="embeds">
+                                <summary>Click here for sentence activity</summary>
+                                <div class="pd-25">
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style"
+                                            src="https://www.canva.com/design/DAGPLfmFMtc/XC5eJXqIlsCUzNhMsjSHXw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGPLfmFMtc&#x2F;XC5eJXqIlsCUzNhMsjSHXw&#x2F;view?utm_content=DAGPLfmFMtc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Blank 3 Panel Landscape Comic Strip</a> by Eva Winchester
+                                </div>
+                            </details>
+                        </div>
+                        <p><b>Quick Quiz</b>: <span class="pd purple">Ask students to greet each other using the words learned. Maybe give students matching cards from the last activity and have them put them up in various places around the room/wall then tell them a word in spanish ex. “Hola” then they would all go to the card that says “Hello” this gets them up and moving around while learning the vocab</span></p>
+                        <p class="pd purple"><span class="bbt bl">Recap</span> the importance of using greetings and polite words in daily life -> to create connections, have a positive environment, and show respect.</div>
+                    </details>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div id="L-2">
+                    <details class="main-det">
+                        <summary class="main-det-sum">Lesson Plan 2: Colors <!--<button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#pdfModal" onclick="openPDF('www.spanishkidstuff.com/lesson-plans/colors-lesson-plan.pdf')">Open PDF</button>--></summary>
+                        <div class="details-content">
+                            <p><b>Objective</b>: <i><u>Introduce basic color vocabulary in English.</u></i></p>
+                            <p><b>Warm-up Activity</b></p>
+                            <p><b>Introduction</b>: <span class="purple">Start with a brief greeting in English ("Hello, good morning!") followed by a short introduction of the day's topic ("Today, we will learn colors"). </span></p>
+                            <p><b>Icebreaker</b>: <span class="purple">Ask the students to say the name of their favorite color in Spanish.</span></p>
+                            <p><b>Intro to Basic Vocab</b>, <span class="purple">Topic: COLORS, Words introduced: Red, Blue, Yellow, Green, Orange, Purple, Pink</span></p>
+                            <details class="embeds">
+                                <summary>Click for Color activity (canva)</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style"
+                                            src="https://www.canva.com/design/DAGPLUMcyYY/A5ZldzovWLW5HQu8MemKMw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGPLUMcyYY&#x2F;A5ZldzovWLW5HQu8MemKMw&#x2F;view?utm_content=DAGPLUMcyYY&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Classroom objects Flashcards in Colorful Illustrative Creative 3D Style </a> by Eva Winchester
+                                </div>
+                            </details>
+                            <p><b>Vid link: </b><a target="_blank" href="https://youtu.be/sDDgzGAUJok?si=yW3SZ9Dt1cqX0bM1">Spanish Color song + Learn English and Spanish Colors | Nursery Rhymes by EFlashApps</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(1)">Open modal</button></p>
+                            <p><b>Repetitions: </b><span class="purple">Have the children repeat each color's name multiple times, associating it with the object or card shown. Can quiz them by saying a color in spanish and having them reply the same color in English</span></p>
+            
+                            <div class="bbt pd45">Practice through Activities (~15 mins)</div>
+                            <p><b>Color Hunt: </b><span class="purple">Ask the children to find an object in the room that matches the color you name.</span>
+                            <br><br><b>Objective: </b><span class="purple">Reinforce color vocabulary by associating it with real-life objects.</span></p>
+            
+                            <p><b>Color Dictionary</b></p>
+                            <p><b>Materials: </b><span class="purple">paper & scissors(or white cards), something to draw on(paper/whiteboard), 6-10 colored writing utensils, object to draw from (cup, hat, box, bag, etc).</span></p>
+                            <p><b>Preparations: </b><span class="purple">cut out 6-10 cards from paper(or use white cards) and write down the English & Spanish name of a color on the front of each card (red, orange, yellow, green, blue, purple, pink, brown, black, gray). Put all of the cards into an object to draw from. Then place the paper/whiteboard & colored utensils next to the cards.</span></p>
+                            <p><b>How to play</b></p>
+                            <ol class="py10 pd45 purple">
+                                <li>Teachers picks a random student</li>
+                                <li>The chosen student faces away from the class and draws a card. Then they pick the writing utensil to match the color</li>
+                                <li>The student makes a drawing with that color and writes its Spanish name next to it</li>
+                                <li>Then they show the class what they drew and the first child to say the English name of the color gets the card(if no one answers correctly the student reads the answer and puts the card back)</li>
+                                <li>Repeat the steps until all cards have been drawn and given to a student</li>
+                                <li>The student with the most cards wins the game</li>
+                            </ol>
+                            <p>
+                                <text class="red">Can then have students sort the separate colors and hang the drawings up somewhere in the classroom next to the english name for each to help students remember them</text>
+                            </p>
+                            <p><b>Intro to simple sentences (~10 min)</b></p>
+                            <p class="purple"><b>Focus: </b>Form simple sentences like "This is red," "The apple is green."</p>
+                            <p class="purple"><b>Pair Work: </b>Have the children point to a colored object in the classroom and say the color in English, practicing with a partner.</p>
+                            <p class="pd45">
+                                <text class="red">Might want to first introduce the verb “is” and explain a bit about pronouns/articles in speech </text>
+                            </p>
+                            <p><b>Review and Recap (~10)</b></p>
+                            <p class="purple"><b>Quiz: </b>Hold up colored flashcards and ask the children to name the colors in English</p>
+                            <p class="purple"><b>Reinforcement: </b>Repeat the colors learned, asking students to recall them without visual aids.</p>
+                            <p>End with "Goodbye" in English</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div id="L-3">
+                    <details class="main-det">
+                        <summary class="main-det-sum">Lesson Plan 3: Parts of the Body <!--<button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#pdfModal" onclick="openPDF('www.spanishkidstuff.com/lesson-plans/body-lesson-plan.pdf')">Open PDF</button>--></summary>
+                        <div class="details-content">
+                            <p><b>Objective</b>: Introduce basic vocabulary for parts of the body in English.</p>
+                            <p><b>Vid link</b>: <a target="_blank" href="https://www.youtube.com/watch?v=Zbh3k7rwdoQ">https://www.youtube.com/watch?v=Zbh3k7rwdoQ</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(2)">Open modal</button></p>
+                            <p><b>Additional Song</b>: <a target="_blank" href="https://www.youtube.com/watch?v=ZanHgPprl-0">https://www.youtube.com/watch?v=ZanHgPprl-0</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(3)">Open modal</button></p>
+                            <p><b>Warm Up (~5)</b></p>
+                            <p><b>Introduction</b>: Greet the students and introduce the topic ("Today, we will learn the names of some parts of the body").</p>
+                            <p><b>Icebreaker</b>: Ask the children to point to different body parts as you name them in Spanish.</p>
+                            <p><b>Intro to basic vocab (~15)</b></p>
+                            <p>
+                                <b>Topic</b>: Parts of the body <br><br>
+                                <b>Words</b>: Introduce 7 basic body parts (head, arm, leg, hand, foot, eye, ear). <br>
+                                <br><b>Visual Aids</b>: Use a diagram of the body or point to your own body parts as you say each word. <br>
+                                <br><b>Repetitions</b>:Have the children repeat each body part's name multiple times, associating it with the part of their own <br>
+                            </p>
+                            <details class="embeds">
+                                <summary>Click for diagram</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style"
+                                            src="https://www.canva.com/design/DAGPswDlI3k/vqgNGCCGOGZRKGzYIN3ooQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGPswDlI3k&#x2F;vqgNGCCGOGZRKGzYIN3ooQ&#x2F;view?utm_content=DAGPswDlI3k&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Parts of the Body Printable Worksheet in White Brown Orange Cartoon Style </a> by Eva Winchester
+                                </div>
+                            </details>
+                            <p><b>Practice Through Activities (15 minutes)</b></p>
+                            <p><b>Activity 1</b>: 'Simon Says': Play "Simon Says" using the new vocabulary (e.g., "Simon says touch your head").</p>
+                            <p><b>Objective</b>: Reinforce body part vocabulary in a fun, interactive way.</p>
+                            <p><b>Materials</b>: paper & scissors(or white cards), writing utensil</p>
+                            <p><b>Preparations</b>: cut out 7 cards from paper(or use white cards) and write the name of a body part(head, arm, leg, hand, foot, eye, ear) in English with Spanish translation on the front of each card. (the cards are an optional part of the game, if the students know the English name for body parts well enough then the cards aren’t needed)</p>
+            
+                            <p><b class="yellow">How to play</b></p>
+                            <ol class="py10 pd45 purple">
+                                <li>The students stand up and spread out a couple of feet away from each other and the teacher stands in front of the class.</li>
+                                <li>The teacher then starts the game by calling out “Simon dice tocar tu…” and adds the English name for a body part. “Simon dice tocar tu head” (they also have the option to use the cards)</li>
+                                <li>The students then have to touch that body part. But the rule is the students only do as the teacher says if they say Simon dice(Simon Says) before saying the command. For example, if the teacher had said “tocar tu head” without Simon dice, then the students who touched their head would be eliminated and out of the game. The students who touched the wrong body parts would also be eliminated. (The teacher can also add commands to freeze and dance in between to make the game more fun.)</li>
+                                <li>The teacher continues to give different commands(speeding up each command will make the game more challenging and fun) until there is one student left.</li>
+                                <li>That student wins the game</li>
+                                <li>After playing the game once or twice the students can take turns in the teacher’s place giving the commands for each game while using the cards.</li>
+                            </ol>
+                            <p><b>Activity 2: Drawing</b>: Ask children to draw a simple person and label the body parts in English.</p>
+                            <p><b>Objective</b>: Practice vocab through drawing and writing</p>
+                            <p><b>Introduction to Simple Sentences (10 minutes)</b></p>
+                            <p><b>Focus</b>: Form simple sentences like "This is my hand," "I have two legs."</p>
+                            <p><b>Pair Work</b>: Have children practice the sentences with a partner, pointing to their own or each other’s body parts. <text class="red">if they are unfamiliar with using “this is my” or “I have” could do an activity showing different animals that also have all of the body parts mentioned and having them see the multiple meanings for what each body stands for not just on a human.</text> </p>
+                            <p><b>Review and Recap (10 minutes)</b></p>
+                            <p><b>Quiz</b>: Point to a body part and ask the children to name it in English (could have each kid pat their “arm, leg, etc.” and have other try to quickly say out what they are patting to make a bit more fun)</p>
+                            <p><b>Reinforcement</b>: Repeat the body parts, asking students to recall them without pointing</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div id="L-4">
+                    <details class="main-det">
+                        <summary class="main-det-sum">Lesson Plan 4: Shapes <!--<button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#pdfModal" onclick="openPDF('www.spanishkidstuff.com/lesson-plans/shapes-lesson-plan.pdf')">Open PDF</button>--></summary>
+                        <div class="details-content">
+                            <p><b>Objective</b>: Introduce basic shapes in English.</p>
+                            <p>Vid link: <a href="https://www.youtube.com/watch?v=3V4KtC1rN-Y" target="_blank" rel="noopener noreferrer">Learn the Basic Shapes in Spanish: Circle, Square & Triangle (Círculo, Cuadrado y Triángulo)</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(4)">Open modal</button></p>
+                            <p><b>Warm-up (~5)</b></p>
+                            <p>
+                                <b>Introduction</b>: Greet the students and introduce the topic ("Today, we will learn shapes"). <br> <br>
+                                <b>Icebreaker</b>: Ask the children to name shapes they know in Spanish. Can use shapes canva below that excludes the english names for this part
+                            </p>
+                            <details class="embeds">
+                                <summary>Click to see canva</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style"
+                                            src="https://www.canva.com/design/DAGQgYJ88M8/3-ecjoj1HnppFvTOqHVR8Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGQgYJ88M8&#x2F;3-ecjoj1HnppFvTOqHVR8Q&#x2F;view?utm_content=DAGQgYJ88M8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">FORMAS</a> by Eva Winchester
+                                </div>
+                            </details>
+                            <p>
+                                <b>Introduction to Basic Vocabulary (15 minutes) Topic: Shapes. Words: Introduce 5 basic shapes (circle, square, triangle, rectangle, star)</b> <br><br>
+                                <b>Visual Aids</b>: Use flashcards or draw shapes on the board as you say each word. could have vocab art gallery with each student drawing their favorite shape on a white board then going through every artwork and repeating each of them in english between you and the students. <br><br>
+                                <b>Repetition</b>: Have the children repeat each shape’s name multiple times. <br><br>
+                                <b>Practice Through Activities (15 minutes)</b> <br><br>
+                                <b>Shape Hunt</b>: Ask the children to find objects in the room that match the shape you name. <br><br>
+                                <b>--Objective</b>: Reinforce shape vocabulary by associating it with real-life objects. <br><br>
+                                <b>Shape Drawing</b>: Provide paper and ask the children to draw each shape as you name it. <br><br>
+                                <b>--Objective</b>: Practice shape recognition and following instructions in English. <br><br>
+                                <b>Introduction to Simple Sentences (10 minutes)</b> <br><br>
+                                <b>Focus</b>:  Form simple sentences like "This is a circle," "The window is a square."
+                                <br><br> <b>Pair Work</b>: Have children practice these sentences with a partner, pointing to different shapes in the classroom or their drawings.
+                                <br><br> <b>Quiz</b>: Draw or hold up a shape and ask the children to name it in English. also ask color of the shape to review colors vocab
+                                <br><br> <b>Reinforcement</b>: Review all the shapes learned by asking students to recall them without visual aids.
+                                <br><br>
+                                End with 'Goodbye' in English
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>
