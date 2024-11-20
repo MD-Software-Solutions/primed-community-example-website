@@ -12,6 +12,7 @@
         <script defer src="script.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="icon" type="image/webp" href="https://primed.com.co/wp-content/uploads/2023/12/Primed-Community-white-logo.webp">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg custom-nav py-4 rounded-nav shadow-sm">
@@ -33,44 +34,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="curriculum.html">Lesson Plans</a>
                             </li>
-                            <!-- <li class="nav-item mx-4">
-                                <div id="search-lessons" class="input-group mb-3">
-                                    <select class="form-select" id="lesson-select">
-                                        <option selected>Select a Lesson</option>
-                                        <option value="1">L-1</option>
-                                        <option value="2">L-2</option>
-                                        <option value="3">L-3</option>
-                                        <option value="4">L-4</option>
-                                        <option value="5">L-5</option>
-                                        <option value="6">L-6</option>
-                                        <option value="7">L-7</option>
-                                        <option value="8">L-8</option>
-                                        <option value="9">L-9</option>
-                                        <option value="10">L-10</option>
-                                        <option value="11">L-11</option>
-                                        <option value="12">L-12</option>
-                                        <option value="13">L-13</option>
-                                        <option value="14">L-14</option>
-                                        <option value="15">L-15</option>
-                                        <option value="16">L-16</option>
-                                        <option value="17">L-17</option>
-                                        <option value="18">L-18</option>
-                                        <option value="19">L-19</option>
-                                        <option value="20">L-20</option>
-                                        <option value="21">L-21</option>
-                                        <option value="22">L-22</option>
-                                        <option value="23">L-23</option>
-                                        <option value="24">L-24</option>
-                                        <option value="25">L-25</option>
-                                        <option value="26">L-26</option>
-                                        <option value="27">L-27</option>
-                                        <option value="28">L-28</option>
-                                        <option value="29">L-29</option>
-                                        <option value="30">L-30</option>
-                                    </select>
-                                    <button id="search-btn" class="btn" type="button">Go</button>
-                                </div>
-                            </li> -->
                         </ul>
                     </div>
                 </form>
@@ -89,7 +52,10 @@
                 <div class="modal-body">
                   <div class="ratio ratio-16x9">
                     <iframe id="modal_video" src="" title="YouTube video" allowfullscreen></iframe>
+                    
                   </div>
+                  <br>  
+                <a href="" id="vid-link"></a>
                 </div>
               </div>
             </div>
@@ -139,8 +105,13 @@
                         <div class="details-content">
                             <p><b>Objective</b>: <i><u>Learn basic greetings and polite words used in everyday conversation.</u></i></p>
                             <p><b>Video Link</b>: <a class="vid-link" target="_blank" href="https://youtu.be/5v2S84EuN0A?si=bTuG5wOMNx826a_8">Learn Spanish Greetings | English to Spanish | Rock 'N Learn</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(0)">Open modal</button></p>
-                            <div>
-                                <img  class="lesson-img pd45" src="https://wallpaperaccess.com/full/1149953.jpg" alt="">
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://langfocus.com/wp-content/uploads/2016/03/greetings1-1024x576.png" alt="">
+                                </div>
+                                <div class="img-flex-element">
+                                    <img src="https://th.bing.com/th/id/R.e95c6bdbc43372100d024a408d9ea64b?rik=%2bA7P2tNkP86cuQ&riu=http%3a%2f%2fspanish4sombreros.weebly.com%2fuploads%2f9%2f8%2f6%2f7%2f9867619%2f9235947_orig.jpg&ehk=x3G07AN7qIqmCrWjt4A8ENcs0ugDQl%2b2%2fTnW8M%2bR6sI%3d&risl=&pid=ImgRaw&r=0" alt="">
+                                </div>
                             </div>
                             <p><b>Introduce the words</b>: <text class="purple pd">“Hello", “Good morning”, “Good afternoon”, “Good evening”, “Goodbye”,  “How are you?”, “My name is”, “Pleased to meet you”, “Fine, thank you”, “What is your name”, “What’s going on?”, “Nothing”, “Yes”, “No”</text></p>
                             <p>
@@ -206,6 +177,11 @@
                         <summary class="main-det-sum">Lesson Plan 2: Colors <!--<button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#pdfModal" onclick="openPDF('www.spanishkidstuff.com/lesson-plans/colors-lesson-plan.pdf')">Open PDF</button>--></summary>
                         <div class="details-content">
                             <p><b>Objective</b>: <i><u>Introduce basic color vocabulary in English.</u></i></p>
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://spanishtoenglishlanguage.files.wordpress.com/2017/03/colors-in-spanish-to-english.jpg?w=296" alt="">
+                                </div>
+                            </div>
                             <p><b>Warm-up Activity</b></p>
                             <p><b>Introduction</b>: <span class="purple">Start with a brief greeting in English ("Hello, good morning!") followed by a short introduction of the day's topic ("Today, we will learn colors"). </span></p>
                             <p><b>Icebreaker</b>: <span class="purple">Ask the students to say the name of their favorite color in Spanish.</span></p>
@@ -263,6 +239,11 @@
                         <summary class="main-det-sum">Lesson Plan 3: Parts of the Body <!--<button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#pdfModal" onclick="openPDF('www.spanishkidstuff.com/lesson-plans/body-lesson-plan.pdf')">Open PDF</button>--></summary>
                         <div class="details-content">
                             <p><b>Objective</b>: Introduce basic vocabulary for parts of the body in English.</p>
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://cdn.shopify.com/s/files/1/0021/2231/7888/files/HH_Body_Spanish_Web.jpg?v=1665509206" alt="">
+                                </div>
+                            </div>
                             <p><b>Vid link</b>: <a target="_blank" href="https://www.youtube.com/watch?v=Zbh3k7rwdoQ">https://www.youtube.com/watch?v=Zbh3k7rwdoQ</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(2)">Open modal</button></p>
                             <p><b>Additional Song</b>: <a target="_blank" href="https://www.youtube.com/watch?v=ZanHgPprl-0">https://www.youtube.com/watch?v=ZanHgPprl-0</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(3)">Open modal</button></p>
                             <p><b>Warm Up (~5)</b></p>
@@ -319,6 +300,11 @@
                         <summary class="main-det-sum">Lesson Plan 4: Shapes <!--<button type="button" class="btn pdf-btns" data-bs-toggle="modal" data-bs-target="#pdfModal" onclick="openPDF('www.spanishkidstuff.com/lesson-plans/shapes-lesson-plan.pdf')">Open PDF</button>--></summary>
                         <div class="details-content">
                             <p><b>Objective</b>: Introduce basic shapes in English.</p>
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://i0.wp.com/www.spanish4kiddos.com/wp-content/uploads/2013/03/ShapesinSpanishwtmk.jpg?fit=980%2C791&ssl=1" alt="">
+                                </div>
+                            </div>
                             <p>Vid link: <a href="https://www.youtube.com/watch?v=3V4KtC1rN-Y" target="_blank" rel="noopener noreferrer">Learn the Basic Shapes in Spanish: Circle, Square & Triangle (Círculo, Cuadrado y Triángulo)</a> or view in site: <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(4)">Open modal</button></p>
                             <p><b>Warm-up (~5)</b></p>
                             <p>
@@ -357,10 +343,475 @@
                     </details>
                 </div>
             </div>
+            <div class="flex-row">
+                <div class="L-5">
+                    <details class="main-det">
+                        <summary class="main-det-sum">
+                            Lesson Plan 5: Animals
+                        </summary>
+                        <div class="details-content">
+                            <p><b>Objective</b>: <i><u>Learn the names of common animals and practice forming simple sentences.</u></i></p>
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://th.bing.com/th/id/OIP.CSjIg9fsqnO2W_D93Hc-CwAAAA?rs=1&pid=ImgDetMain" alt="">
+                                </div>
+                            </div>
+                            <p><b>Video Link</b>: 
+                                <a class="vid-link" target="_blank" href="https://www.youtube.com/watch?v=tj4JdexVNBA">Animal Names Song</a> 
+                                or view in site: 
+                                <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(5)">Open modal</button>
+                            </p>
+                            
+                            <div>
+                                <p><b>Topic</b>: Animals</p>
+                                <p><b>Words</b>: Introduce 8 common animals (dog, cat, bird, fish, elephant, lion, cow, rabbit).</p>
+                            </div>
+                        
+                            <div>
+                                <p><b>Visual Aids</b>: Use pictures of animals to show each as you say the word.</p>
+                            </div>
+
+                            <p><a href="https://www.canva.com/design/DAGQkhPrloQ/vPdSAy-G6whNKXngWT6Msg/edit?utm_content=DAGQkhPrloQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">Animal Canva</a></p>
+                            
+                            
+                            <p><b>Repetition</b>: Have the children repeat each animal’s name multiple times.</p>
+                            
+                            <div class="pdbbt">Main Activities (~15 minutes)</div>
+                        
+                            <div class="pdbbtl">Activity 1: Animal Sounds Game</div>
+                            <ul class="py10 pd45 purple">
+                                <li>Make an animal sound and have the children guess the animal in English.</li>
+                                <li><b>Objective</b>: Reinforce animal vocabulary in a fun way.</li>
+                            </ul>
+                        
+                            <div class="pdbbtl">Activity 2: Matching Game</div>
+                            <ul class="py10 pd45 purple">
+                                <li>Provide cards (Canva link above) with animal pictures and names. Have children match the picture to the name.</li>
+                                
+                            </ul>
+
+                            
+                            
+                            <p><b>Objective</b>: Practice animal recognition and vocabulary.</p>
+                            <div class="pdbbtl">Activity 3: Animal Tag</div>
+                            <p><b>Materials</b>: None</p>
+                            <p><b>Preparations</b>: None</p>
+                            <ul class="py10 pd45 purple">
+                                <li>The teacher picks two animals (one for the tagger and one for the other players) and explains roles in English and Spanish.</li>
+                                <li>Choose one student to be the tagger and the rest as players.</li>
+                                <li>For example, the tagger could be a lion, and the players could be elephants or cows.</li>
+                                <li>The tagger chases the players. Tagged players sit to the side of the room.</li>
+                                <li>The last player standing must call out their animal's name in English before the tagger touches them.</li>
+                                <li>If they succeed, they are the next tagger. Otherwise, the tagger wins the round.</li>
+                                <li>The teacher continues with new predator and prey roles for the next round.</li>
+                            </ul>
+                        
+                            <p class="pdbbt"><b>Introduction to Simple Sentences (~10 minutes)</b></p>
+                            <p><b>Focus</b>: Form simple sentences like "This is a dog," "The lion is big."</p>
+                            <div class="pdbbtl">Pair Work</div>
+                            <p>
+                                Have children practice sentences with a partner, using animal pictures or toys. 
+                                Alternatively, write animal names on post-it notes, place them on students' backs, and have them guess their animal by asking two questions in English.
+                            </p>
+                        
+                            <p class="pdbbt"><b>Review and Recap (~10 minutes)</b></p>
+                            <div>
+                                <p><b>Quick Quiz</b>: Hold up an animal picture and ask the children to name it in English.</p>
+                                <p><b>Reinforcement</b>: Go over animal names again, asking students to recall them without visual aids.</p>
+                            </div>
+                        
+                            <p class="pd purple"><span class="bbt bl">Goodbye</span>: End the class with a collective "Goodbye" in English.</p>
+                        </div>
+                        
+                    </details>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="L-6">
+                    <details class="main-det">
+                        <summary class="main-det-sum">
+                            Lesson Plan 6: Classroom Objects
+                        </summary>
+                        <div class="details-content">
+
+                            <p><b>Video Link</b>: 
+                                <a class="vid-link" target="_blank" href="https://www.youtube.com/watch?v=0218OFXQtXM">Classroom Objects song 1</a> 
+                                or view in site: 
+                                <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(6)">Open modal</button>
+                            </p>
+
+                            <p><b>Video Link</b>: 
+                                <a class="vid-link" target="_blank" href="https://www.youtube.com/watch?v=41cJ0mqWses">School Supplies Song</a> 
+                                or view in site: 
+                                <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(7)">Open modal</button>
+                            </p>
+
+                            <p><b>Objective</b>: <i><u>Introduce basic classroom object vocabulary in English.</u></i></p>
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://www.spanish4kiddos.com/wp-content/uploads/2014/06/Spanish_ClassroomObjects.png" alt="">
+                                </div>
+                            </div>
+                            <p><b>Warm-Up (~5 minutes)</b></p>
+                            <p><b>Introduction:</b> Greet the students and introduce the topic ("Today, we will learn the names of things we use in the classroom").</p>
+                            <p><b>Icebreaker:</b> Ask the children to name some classroom objects in Spanish.</p>
+                            
+                            <p><b>Introduction to Basic Vocabulary (~15 minutes)</b></p>
+                            <p><b>Topic:</b> Classroom Objects</p>
+                            <p><b>Words:</b> Introduce 7 common classroom objects (pen, pencil, book, chair, table, eraser, board).</p>
+                            <details class="embeds">
+                                <summary>Click to see Canva</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style" 
+                                            src="https://www.canva.com/design/DAGRNNAq1CQ/3njcu5JY6QMOUwTPBINWfw/view?embed" 
+                                            allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGRNNAq1CQ&#x2F;3njcu5JY6QMOUwTPBINWfw&#x2F;view?utm_content=DAGRNNAq1CQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
+                                       target="_blank" rel="noopener">Classroom objects</a> by Eva Winchester
+                                </div>
+                            </details>
+                            <p><b>Visual Aids:</b> Use the actual objects or pictures to show each as you say the word.</p>
+                            <p><b>Repetition:</b> Have the children repeat each object's name multiple times.</p>
+                        
+                            <p><b>Practice Through Activities (~15 minutes)</b></p>
+                            <p><b>Activity 1:</b> "What’s Missing?" Game</p>
+                            <p>Show the students several objects, then remove one while their eyes are closed. Ask them to identify the missing object in English.</p>
+                            <p><b>Bonus:</b> Ask students to identify the color or shape of the object to reinforce past lessons.</p>
+                            <p><b>Objective:</b> Reinforce vocabulary and observation skills.</p>
+                            
+                            <p><b>Activity 2:</b> Object Sorting</p>
+                            <p>Provide a mixed set of classroom object cards and ask the children to sort them by type (e.g., writing tools, furniture).</p>
+
+                            <details class="embeds">
+                                <summary>Click to see Canva</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style" 
+                                            src="https://www.canva.com/design/DAGROuYNVsk/kpRV4NCu2gdTaBColVzW0g/view?embed" 
+                                            allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGROuYNVsk&#x2F;kpRV4NCu2gdTaBColVzW0g&#x2F;view?utm_content=DAGROuYNVsk&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
+                                       target="_blank" rel="noopener">Pen</a> by Eva Winchester
+                                </div>
+                            </details>
+                            
+
+
+                            <p><b>Bonus:</b> Sort by colors or shapes for additional rounds.</p>
+                            <p><b>Objective:</b> Practice recognizing and categorizing classroom objects.</p>
+                            
+                            <p><b>Activity 3:</b> Escape the Room: School Supplies Hunt</p>
+                            <p><b>Objective:</b> Escape the room by finding all the hidden school supplies based on the English words provided.</p>
+                            <p><b>Materials:</b> Various school supplies (e.g., pencils, erasers, notebooks, rulers, crayons, glue sticks, scissors, etc.), clue cards with English names or hints.</p>
+                            <p><b>Preparations:</b> Hide supplies around the room and prepare clue cards with names or simple sentences.</p>
+                            <p><b>How to Play:</b></p>
+                            <ol class="pd45 purple">
+                                <li>Divide students into small teams.</li>
+                                <li>Give each team a clue card with the name of a school supply in English.</li>
+                                <li>Teams search the room to find the item matching the clue.</li>
+                                <li>If correct, they get the next clue; if not, they keep searching.</li>
+                                <li>The first team to find all items and return wins and “escapes” the room.</li>
+                            </ol>
+                            <p><b>Example Clues:</b></p>
+                            <ul>
+                                <li>Pencil: “I use this to write my homework.”</li>
+                                <li>Eraser: “I use this to correct my mistakes.”</li>
+                                <li>Notebook: “I write my notes in this.”</li>
+                                <li>Ruler: “I use this to draw straight lines.”</li>
+                                <li>Crayons: “I use these to color my drawings.”</li>
+                            </ul>
+                            <p><b>Alternative:</b> Use the English word alone for more advanced students.</p>
+                        
+                            <p><b>Introduction to Simple Sentences (~10 minutes)</b></p>
+                            <p><b>Focus:</b> Form simple sentences like "This is a pencil," "I have a book."</p>
+                            <p><b>Pair Work:</b> Have children practice these sentences with a partner, pointing to objects in the classroom.</p>
+                            <p><b>Alternative Activity:</b> Write object names on post-it notes, attach them to students' backs, and have peers ask questions to guess the object.</p>
+                        
+                            <p><b>Review and Recap (~10 minutes)</b></p>
+                            <p><b>Quick Quiz:</b> Hold up an object and ask the children to name it in English.</p>
+                            <p><b>Reinforcement:</b> Review all objects learned, asking students to recall without visual aids.</p>
+                            <p><b>Goodbye:</b> End the class with a collective "Goodbye" in English.</p>
+                        </div>
+                        
+                    </details>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="L-7">
+                    <details class="main-det">
+                        <summary class="main-det-sum">
+                            Lesson Plan 7: Adjectives
+                        </summary>
+                        <div class="details-content">
+
+                            <p><b>Video Link</b>: 
+                                <a class="vid-link" target="_blank" href="https://www.youtube.com/watch?v=3JZi2oDvPs4">Big, Big, Big | Adjectives Song for Kids</a> 
+                                or view in site: 
+                                <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(8)">Open modal</button>
+                            </p>
+
+                            <p><b>Video Link</b>: 
+                                <a class="vid-link" target="_blank" href="https://www.youtube.com/watch?v=YW-fP7INEmY">The Opposites Song | La canción de los opuestos | Bilingual Preschool Vocabulary | Canticos</a> 
+                                or view in site: 
+                                <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(9)">Open modal</button>
+                            </p>
+
+                            <p><b>Objective</b>: <i><u>Learn adjectives and use them to describe everyday objects.</u></i></p>
+                        
+                            <p><b>Warm-Up (~5 minutes)</b></p>
+                            <p><b>Adjective Introduction:</b> Describe an object in the room (e.g., "This is a big, red book") and have students guess what it is.</p>
+                        
+                            <p><b>Introduction (~10 minutes)</b></p>
+                            <p><b>Introducing Adjectives:</b> Big, Small, Red, Blue, Soft, Hard.</p>
+                            <p><b>Visual Aids:</b> Show objects or pictures and describe them using the new adjectives.</p>
+                            <details class="embeds">
+                                <summary>Click to see Canva</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style" 
+                                            src="https://www.canva.com/design/DAGR_C-KoUc/GC3QU1vM5JRcyMBwdpQveg/view?embed" 
+                                            allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGR_C-KoUc&#x2F;GC3QU1vM5JRcyMBwdpQveg&#x2F;view?utm_content=DAGR_C-KoUc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
+                                       target="_blank" rel="noopener">Colorful Cartoon Personality Adjectives English Flashcards</a> by Eva Winchester
+                                </div>
+                            </details>
+                            
+                            
+                        
+                            <p><b>Main Activity (~20 minutes)</b></p>
+                            <p><b>Adjective Hunt:</b> Students go around the classroom finding objects that match the adjectives introduced (e.g., find something red, find something soft).</p>
+                            <p><b>Pair Activity:</b> In pairs, students take turns describing an object using adjectives, and their partner guesses the object.</p>
+                        
+                            <p><b>Practice (~15 minutes)</b></p>
+                            <p><b>Activity 1:</b> Adjective Sorting</p>
+                            <p>Provide a mix of words, and students sort them into adjectives and non-adjectives.</p>
+                        
+                            <p><b>Activity 2:</b> Sentence Building</p>
+                            <p>Students build sentences using adjectives to describe objects (e.g., "The small, blue ball").</p>
+                        
+                            <p><b>Additional Practice:</b> Students can draw pictures (e.g., an apple that is small, big, and red), then switch it around so they have to change their drawing to fit the adjectives.</p>
+                        
+                            <p><b>Game:</b> Burst the Bubble Adjective Game! 
+                                <a href="https://www.turtlediary.com/game/what-are-adjectives.html" target="_blank">Click here to play</a>.
+                            </p>
+                        
+                            <p><b>Review and Recap (~10 minutes)</b></p>
+                            <p><b>Review:</b> Have students describe different objects in the classroom using the adjectives learned.</p>
+                            <p><b>Recap:</b> Emphasize the importance of adjectives in making descriptions more vivid and tie in previous vocabulary learned (e.g., describing animals or the color of shapes).</p>
+                        
+                            <p><b>Goodbye:</b> End the class with a collective "Goodbye" in English.</p>
+                        
+                        </div>
+                        
+                    </details>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="L-8">
+                    <details class="main-det">
+                        <summary class="main-det-sum">
+                            Lesson Plan 8: Nature
+                        </summary>
+                        <div class="details-content">
+
+                            <p><b>Objective</b>: <i><u>Learn vocabulary related to geographical features like mountains, lakes, and oceans.</u></i></p>
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://th.bing.com/th/id/OIP.d1Fdvx-DMmCIqxA92cZI1AHaKB?rs=1&pid=ImgDetMain" alt="">
+                                </div>
+                            </div>
+                            <p><b>Warm-Up (~5 minutes)</b></p>
+                            <p><b>Nature Word Association:</b> Say the word "nature", “ocean”, “lake”, “mountain” and other words relating to this.</p>
+                        
+                            <p><b>Introduction (~10 minutes)</b></p>
+                            <p><b>Introducing Words:</b> Mountain, Lake, Ocean, River, Valley, Hill.</p>
+                            <p><b>Visual Aids:</b> Show pictures of each geographical feature while saying the word.</p>
+                            <details class="embeds">
+                                <summary>Click to see Canva</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style" 
+                                            src="https://www.canva.com/design/DAGR_B5FSgY/uAwa4LOEt_JhMuOXbTT8OQ/view?embed" 
+                                            allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGR_B5FSgY&#x2F;uAwa4LOEt_JhMuOXbTT8OQ&#x2F;view?utm_content=DAGR_B5FSgY&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
+                                        target="_blank" rel="noopener">Geographical Features Canva</a> by Eva Winchester
+                                </div>
+                            </details>
+                        
+                            <p><b>Main Activity (~20 minutes)</b></p>
+                            <p><b>Story Time:</b> Read a short story or show a video that features mountains, lakes, and oceans. Pause to discuss each word and its context in the story.</p>
+                            <p><b>Game:</b> <a href="https://mes-games.com" target="_blank">Click here to play</a> (Select “Nature 1” or “Nature 2”).</p>
+                        
+                            <p><b>Practice (~15 minutes)</b></p>
+                            <p><b>Activity 1:</b> Draw and Label</p>
+                            <p>Students draw a simple landscape featuring a mountain, lake, ocean, etc., and label each feature with the correct word. For extra credit, they could also label them with adjectives, colors, or animals that live in that place!</p>
+                        
+                            <p><b>Activity 2:</b> Word Hunt</p>
+                            <p>Hide word cards around the room, and students find and match them with pictures.</p>
+                        
+                            <p><b>Review and Recap (~10 minutes)</b></p>
+                            <p><b>Review:</b> Review the words by having students point to pictures of geographical features and say the word.</p>
+                            <p><b>Recap:</b> Tie in past animal vocabulary by asking questions like “Where does the cat live?” or asking about other animals, and the students will respond with the type of environment they think the animal would live in.</p>
+                        
+                            <p><b>Recap with a Game:</b> Play "I Spy" using the new words (e.g., "I spy with my little eye, something that is a mountain").</p>
+                        
+                        </div>
+                        
+                    </details>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="L-9">
+                    <details class="main-det">
+                        <summary class="main-det-sum">
+                            Lesson Plan 9: Weather
+                        </summary>
+                        <div class="details-content">
+
+                            <p><b>Video Link</b>: 
+                                <a class="vid-link" target="_blank" href="https://www.youtube.com/watch?v=I8GeA3anPdo">How's the Weather Song</a> 
+                                or view in site: 
+                                <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(10)">Open modal</button>
+                            </p>
+
+                            <p><b>Video Link</b>: 
+                                <a class="vid-link" target="_blank" href="https://www.youtube.com/watch?v=H9ZAryfghmo">Canticos | Weather the Weather / Jarabe Tapatío | Best Nursery Rhyme for Kids | Early Education</a> 
+                                or view in site: 
+                                <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(11)">Open modal</button>
+                            </p>
+
+                            <p><b>Objective</b>: <i><u>Learn vocabulary related to different aspects of nature and weather.</u></i></p>
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://th.bing.com/th/id/R.d6311aeb8ec48a5c7c64934eda469fda?rik=8fXYnMooH6NFOg&riu=http%3a%2f%2fspanish4sombreros.weebly.com%2fuploads%2f9%2f8%2f6%2f7%2f9867619%2f9559095_orig.jpg&ehk=qkHHVqRAVACdq05wbFg7tgsPCx%2fVEBG9xOpCTVyP0Ys%3d&risl=&pid=ImgRaw&r=0" alt="">
+                                </div>
+                            </div>
+                            <p><b>Warm-Up (~5 minutes)</b></p>
+                            <p><b>Weather Check:</b> Start the class by asking students about the current weather outside (e.g., "Is it sunny or rainy today?"). Students respond using simple weather words they already know and/or point to a picture that currently describes the type of weather that day.</p>
+                        
+                            <p><b>Introduction (~10 minutes)</b></p>
+                            <p><b>Introducing Words:</b> Sunny, Rainy, Cloudy, Windy, Stormy, Snowy.</p>
+                            <p><b>Visual Aids:</b> Use pictures or short video clips of different weather conditions to illustrate each word.</p>
+                            <details class="embeds">
+                                <summary>Click to see Canva</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style" 
+                                            src="https://www.canva.com/design/DAGR_FY1__4/cbxIan-YMy_bmt1NQOJfBw/view?embed" 
+                                            allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGR_FY1__4&#x2F;cbxIan-YMy_bmt1NQOJfBw&#x2F;view?utm_content=DAGR_FY1__4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
+                                        target="_blank" rel="noopener">Weather Conditions Canva</a> by Eva Winchester
+                                </div>
+                            </details>
+
+                        
+                            <p><b>Main Activity (~20 minutes)</b></p>
+                            <p><b>Weather Role-Play:</b> Students act out different weather conditions while others guess the word (e.g., pretending to hold an umbrella for "Rainy").</p>
+                            <p><b>Nature Walk (indoor/outdoor):</b> If possible, take students on a short walk around the school to observe the weather and nature. They can point out and name what they see using the new words (e.g., "The sky is cloudy"). They can also point out any animals they see and describe the shapes and colors of everything around them, reinforcing previously learned vocabulary.</p>
+                        
+                            <p><b>Practice (~15 minutes)</b></p>
+                            <p><b>Weather Matching Game:</b> Provide students with weather picture cards and word cards. They match each picture to the correct word.</p>
+                            <details class="embeds">
+                                <summary>Click to see Canva</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style" 
+                                            src="https://www.canva.com/design/DAGR_T_6SwQ/25fOtDQfJdiLYnqPk9n1Vw/view?embed" 
+                                            allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGR_T_6SwQ&#x2F;25fOtDQfJdiLYnqPk9n1Vw&#x2F;view?utm_content=DAGR_T_6SwQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
+                                        target="_blank" rel="noopener">Weather Matching Canva</a> by Eva Winchester
+                                </div>
+                            </details>
+
+                        
+                            <p><b>Sentence Building:</b> Students create sentences describing the weather (e.g., "Today is sunny," "It was rainy yesterday").</p>
+                        
+                            <p><b>Review and Recap (~10 minutes)</b></p>
+                            <p><b>Weather Chart:</b> As a class, create a weather chart for the week using the new vocabulary. Each student contributes a sentence about what the weather was like on a particular day. They can also draw a picture of a house or tree during each of the weather conditions on this chart.</p>
+                        
+                            <p><b>Quick Quiz:</b> Show pictures of different weather conditions, and students name them. Recap the importance of understanding weather and how it affects our daily lives.</p>
+                        
+                            <p><b>Goodbye:</b> End the class with a collective "Goodbye" in English.</p>
+                        
+                        </div>
+                        
+                    </details>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="L-10">
+                    <details class="main-det">
+                        <summary class="main-det-sum">
+                            Lesson Plan 10: Clothes
+                        </summary>
+                        <div class="details-content">
+
+                            <p><b>Video Link</b>: 
+                                <a class="vid-link" target="_blank" href="https://www.youtube.com/watch?v=jdgZFLKRZ0A">Let's Get Dressed Song | Clothes Song for Kids | Kindergarten, Preschool & ESL | Fun Kids English</a> 
+                                or view in site: 
+                                <button type="button" class="btn my_button" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="video_play(12)">Open modal</button>
+                            </p>
+
+                            <p><b>Objective</b>: <i><u>Learn vocabulary related to common clothes and practice using simple sentences to describe what others are wearing.</u></i></p>
+                            <div class="img-flex-container">
+                                <div class="img-flex-element">
+                                    <img src="https://th.bing.com/th/id/OIP.w3hn05CGhxWjIlTNhFUWWAAAAA?rs=1&pid=ImgDetMain" alt="">
+                                </div>
+                            </div>
+                            <p><b>Introduction to Basic Vocabulary (~15 minutes)</b></p>
+                            <p><b>Topic:</b> Common Clothes</p>
+                            <p><b>Words:</b> Introduce 5-7 items (e.g., shirt, pants, dress, hat, shoes, socks, jacket).</p>
+                            <p><b>Visual Aids:</b> Use pictures or real clothes.</p>
+                            <details class="embeds">
+                                <summary>Click to see Canva</summary>
+                                <div>
+                                    <div class="embeds-style">
+                                        <iframe loading="lazy" class="iframe-style" 
+                                            src="https://www.canva.com/design/DAGR_YhVkzw/FkrbLD6kAlMR9Jq7sBB9AA/view?embed" 
+                                            allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+                                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGR_YhVkzw&#x2F;FkrbLD6kAlMR9Jq7sBB9AA&#x2F;view?utm_content=DAGR_YhVkzw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
+                                        target="_blank" rel="noopener">Clothes Canva</a> by Eva Winchester
+                                </div>
+                            </details>
+                            
+                            <p><b>Repetition:</b> Repeat each word multiple times.</p>
+                        
+                            <p><b>Practice Through Activities (~15 minutes)</b></p>
+                            <p><b>Activity 1:</b> Dress-Up Relay: Have a set of clothes and ask the children to put them on while saying the name of each item.</p>
+                            <p><b>Activity 2:</b> Matching Game: Match pictures of clothes to their written names.</p>
+                        
+                            <p><b>Introduction to Simple Sentences (~10 minutes)</b></p>
+                            <p><b>Focus:</b> "I am wearing ___," "She/He is wearing ___."</p>
+                            <p><b>Pair Work:</b> Practice describing what their partner is wearing.</p>
+                        
+                            <p><b>Review and Recap (~10 minutes)</b></p>
+                            <p><b>Game:</b> Clothes matching game! <a href="https://wordwall.net/resource/10773482/clothes" target="_blank">Click here to play</a>.</p>
+                            <p><b>Quick Quiz:</b> Show pictures or real items and ask for the English name.</p>
+                            <p><b>Reinforcement:</b> Repeat the sentences learned. Go through each piece of clothing and talk about in what weather you would wear it, what color it is, and if it has any shapes or animals.</p>
+                        
+                            <p><b>Goodbye:</b> End with a collective "Goodbye" in English.</p>
+                        
+                        </div>                        
+                    </details>
+                </div>
+            </div>
         </div>
 
 
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br>
     </body>
 </html>
